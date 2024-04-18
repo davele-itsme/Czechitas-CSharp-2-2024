@@ -19,7 +19,7 @@ int rok = int.Parse(textRok);
 DateTime ted = DateTime.Now;
 DateTime casDovoleny = new DateTime(rok, mesic, den);
 
-TimeSpan casDoDovoleny = ted - casDovoleny;
+TimeSpan casDoDovoleny = casDovoleny - ted;
 
 Console.WriteLine($"Dny: {casDoDovoleny.Days}, Minuty: {casDoDovoleny.Minutes}");
 
