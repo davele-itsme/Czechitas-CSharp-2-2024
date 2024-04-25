@@ -29,13 +29,28 @@ public class Program
 
         static bool JePalindrom(string slovo)
         {
+            // cyklus by se mohl optimalizovat tak, ze bychom meli jen polovicni cislo cyklu -> slovo.Length/2
+            for(int i = 0; i < slovo.Length; i++)
+            {
+                if (slovo[i] != slovo[slovo.Length - 1 -i])
+                {
+                    //pokud prvni a posledni charakter ve stringu se nerovna, tak uz vime ze to neni palindrom
+                    //tim padem pokud vratime return false, tak se for loop cyklus uz predcasne ukonci a nebude dal pokracovat v dalsich cyklech
+                    return false;
+                }
+            }
+            //Tim ze for cyklus dobehl jsme si jisti ze slovo je palindrom
+
             return true;
         }
 
-
         for (int i = 0; i < slova.Length; i++)
         {
-            
+            bool jeSlovoPalindrom = JePalindrom(slova[i]);
+            if (jeSlovoPalindrom)
+            {
+                Console.WriteLine(slova[i]);
+            }
         }
 
 
