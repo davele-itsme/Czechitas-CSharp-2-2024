@@ -5,13 +5,13 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lekce1", "Lekce1\Lekce1.csproj", "{B0ADBC5E-BAF3-4A5A-8047-F3B676EEAE12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lekce2_Breakout1", "Lekce2_Breakout1\Lekce2_Breakout1.csproj", "{565431FB-95E9-4751-ABA6-F5195D307A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lekce2_Breakout1", "Lekce2_Breakout1\Lekce2_Breakout1.csproj", "{565431FB-95E9-4751-ABA6-F5195D307A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lekce3_Breakout1", "Lekce3_Breakout1\Lekce3_Breakout1.csproj", "{88ACEBA8-3145-4860-9E0F-3109B2B97011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lekce3_Breakout1", "Lekce3_Breakout1\Lekce3_Breakout1.csproj", "{88ACEBA8-3145-4860-9E0F-3109B2B97011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lekce2_Breakout2", "Lekce2_Breakout2\Lekce2_Breakout2.csproj", "{474BF5C1-FA2F-4FB3-BD7B-434F8DA882A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lekce2_Breakout2", "Lekce2_Breakout2\Lekce2_Breakout2.csproj", "{474BF5C1-FA2F-4FB3-BD7B-434F8DA882A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lekce3_Breakout2", "Lekce3_Breakout2\Lekce3_Breakout2.csproj", "{6205BA9E-0B75-4298-8C1D-DB61EE716D91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lekce3_Breakout2", "Lekce3_Breakout2\Lekce3_Breakout2.csproj", "{6205BA9E-0B75-4298-8C1D-DB61EE716D91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
