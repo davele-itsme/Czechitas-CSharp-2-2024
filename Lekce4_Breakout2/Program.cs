@@ -1,5 +1,5 @@
 ﻿using System;
-
+		
 /* Vytvorte tridu TelefonniSeznam
 - uvnitr ni budete ukladat dvojice Jmeno - Telefonni cislo
 - k tomu pouzijte Dictionary, jehoz klice budou stringy a hodnoty integery
@@ -14,8 +14,8 @@
 
 public class Program
 {
-    public static void Main()
-    {
-
-    }
+	public static void Main()
+	{
+		
+	}
 }
