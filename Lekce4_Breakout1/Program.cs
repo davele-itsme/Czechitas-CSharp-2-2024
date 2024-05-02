@@ -24,13 +24,37 @@ public class Program
 
         // Vypis na konzoli pocet cisel v seznamu
         VypisPocet(cisla);
+        Console.WriteLine("-----------------------------------");
 
         // Pridej cislo 0.5 do seznamu
+        cisla.Add(0.5);
 
         // vypis prvni cislo ze seznamu, ktere je vetsi nez 0.8
+        double hledaneCislo = cisla.Find(cislo => cislo > 0.8);
+        Console.WriteLine(hledaneCislo);
 
         // najdi nejvetsi cislo v seznamu, vypis, ktere to je, a odstran ho ze seznamu
+        cisla.Sort();
+        double nejvetsiCislo = cisla.Last();
+        Console.WriteLine(nejvetsiCislo);
+        cisla.Remove(nejvetsiCislo);
 
+        Console.WriteLine("-----------------------------------");
         // vypis opet vsechna cisla a jejich pocet
+        Vypis(cisla);
+        VypisPocet(cisla);
+
+        static void Vypis(List<double> listCisel)
+        {
+            foreach (double cislo in listCisel)
+            {
+                Console.WriteLine(cislo);
+            }
+        }
+
+        static void VypisPocet(List<double> listCisel)
+        {
+            Console.WriteLine(listCisel.Count());
+        }
     }
 }
