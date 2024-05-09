@@ -35,15 +35,14 @@ public class Program
 		
 		// 1. Řešení
 		var mOvoce = ovoce
-			.Where(o => o.StartsWith("M"));
+			.Where(o => o.StartsWith("M")).ToList();
 
-		//neni treba znat: lazy evaluation vs eager evaluation
-
-		foreach (var m in mOvoce)
+		//IEnumerable - umoznuje lazy evaluation
+		foreach (var o in mOvoce)
 		{
-			
+			Console.WriteLine(o);
 		}
-
+		
 		// ==========================================		
 		// 2. Která z následujících čísel jsou násobky 4 nebo 6
 		List<int> ruznaCisla = new List<int>()
