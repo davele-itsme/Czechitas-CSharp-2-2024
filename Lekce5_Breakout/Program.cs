@@ -34,11 +34,14 @@ public class Program
 		List<string> ovoce = new List<string>() { "Merunka", "Jablko", "Pomeranc", "Meloun", "Malina", "Limetka" };
 		
 		// 1. Řešení
-		List<string> mOvoce = null;
+		var mOvoce = ovoce
+			.Where(o => o.StartsWith("M"));
 
-		foreach (string o in mOvoce)
+		//neni treba znat: lazy evaluation vs eager evaluation
+
+		foreach (var m in mOvoce)
 		{
-			Console.WriteLine(o);
+			
 		}
 
 		// ==========================================		
@@ -49,7 +52,10 @@ public class Program
 		};
 		
 		// 2. Řešení
-		List<int> nasobky4a6 = null;
+			
+		List<int> nasobky4a6 = ruznaCisla.Where(c => c % 4 == 0 || c % 6 == 0).ToList();
+		// 15: c => false || false ... nevrati
+		// 8: c => true || x ... vrati 
 		
 		foreach (int cislo in nasobky4a6)
 		{
@@ -58,6 +64,19 @@ public class Program
 
 		// 3. Kolik je v seznamu ruznaCisla čísel?
 		// Console.WriteLine(?????);
+		int pocetCisel = ruznaCisla.Count();
+		// Pocet unikatnich cisel
+		int pocetUnikatnichCisel = ruznaCisla
+			.Distinct()
+			.Count();
+		
+		Console.WriteLine(pocetUnikatnichCisel);
+		// LINQ: V podstate z toho muzeme udelat jakysi "pipeline" - vysledek jedne metody je vstupem pro dalsi metodu, viz komentar dole
+		/*int pocetCisel = ruznaCisla
+			.Distinct()
+			.Select()
+			.Where()
+			.GroupBy();*/
 
 		// ==========================================
 		// 4. Seřaďte jména vzestupně
@@ -71,7 +90,7 @@ public class Program
 		};
 		
 		// 4. Řešení
-		List<string> vzestupne = null;
+		List<string> vzestupne = new List<string>();
 		
 		foreach (string text in vzestupne)
 		{
@@ -87,6 +106,8 @@ public class Program
 		
 		// 5. Řešení
 		// Console.WriteLine(?????);
+		double soucet = utrata.Sum();
+		Console.WriteLine($"Soucet: {soucet}");
 		
 		// ==========================================		
 		// 6. Jaké je největší cena?
@@ -94,6 +115,8 @@ public class Program
 		{
 			879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
 		};
+
+		double nejvetsiCena = cena.Max();
 		
 		// 6. Řešení
 		// Console.WriteLine(?????);
@@ -118,7 +141,7 @@ public class Program
 		};
 		
 		// 7. Řešení
-		List<SkupinaMilionaru> skupinyPodleBanky = null;
+		List<SkupinaMilionaru> skupinyPodleBanky = new List<SkupinaMilionaru>();
 
 		foreach (var polozka in skupinyPodleBanky)
 		{
@@ -138,7 +161,7 @@ public class Program
 		};
 
 		// 8. Řešení
-		List<Zakaznik> reportMilionaru = null;
+		List<Zakaznik> reportMilionaru = new List<Zakaznik>();
 
 		foreach (Zakaznik zakaznik in reportMilionaru)
 		{
