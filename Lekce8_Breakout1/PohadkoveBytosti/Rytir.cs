@@ -6,4 +6,9 @@ public class Rytir : PohadkovaBytost
     {
         Console.WriteLine("Bojuji s drakem.");
     }
+
+    public void Hello()
+    {
+        
+    }
 }
