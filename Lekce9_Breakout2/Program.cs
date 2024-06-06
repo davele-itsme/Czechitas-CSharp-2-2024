@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 public class Clovek
 {
@@ -28,7 +29,21 @@ public class Program
 		
         //1. Upravte tridu Clovek, aby byla serializovatelna
         //2. Ulozte cely telefonni seznam do XML pomoci serializeru a StreamWriteru
+        XmlSerializer serializer = new XmlSerializer(typeof(List<Clovek>));
+        
+        string cestaKApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        string cestaKTelefonnimuSeznamu = Path.Combine(cestaKApplicationData, "TelefonniSeznam");
+        string cestaKXmlSouboru = Path.Combine(cestaKTelefonnimuSeznamu, "telefonniSeznam.xml");
+
+        using (StreamWriter streamWriter = new StreamWriter(cestaKXmlSouboru))
+        {
+            serializer.Serialize(streamWriter, telefonniSeznam);
+        }
+
         //3. Nactete cely telefonni seznam ze souboru XML pomoci deserializeru a StreamReaderu
-		
+        using (StreamReader streamReader = new StreamReader(cestaKXmlSouboru))
+        {
+            List<Clovek> prectenySeznam = serializer.Deserialize(streamReader) as List<Clovek>;
+        }
     }
 }
